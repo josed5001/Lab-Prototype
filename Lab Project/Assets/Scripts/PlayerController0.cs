@@ -43,4 +43,20 @@ public class PlayerController0 : MonoBehaviour
             transform.position = new Vector3(transform.position.x, yBound2);
         }
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Obstacle"))
+        {
+            Debug.Log("Player collided with Obstacle");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("Powerup"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }
