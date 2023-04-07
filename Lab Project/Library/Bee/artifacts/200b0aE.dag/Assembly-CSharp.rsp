@@ -356,6 +356,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/MoveDown.cs"
 "Assets/Scripts/PlayerController0.cs"
+"Assets/Scripts/SpawnManager.cs"
 -langversion:9.0
 
 /deterministic
