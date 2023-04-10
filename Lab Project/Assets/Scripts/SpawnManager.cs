@@ -9,7 +9,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject powerUp;
 
     private float zObstacleSpawn = 12.0f;
-    private float xSpawnRange = -1.0f;
+    private float xSpawn = -1.0f;
     private float zPowerupRange = 5.0f;
     private float ySpawn = 9.0f;
     // Start is called before the first frame update
@@ -28,7 +28,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnObstacle()
     {
-        Vector3 SpawnPos = new Vector3(xSpawnRange, ySpawn, zObstacleSpawn);
+        Vector3 SpawnPos = new Vector3(xSpawn, ySpawn, zObstacleSpawn);
         int RandomIndex = Random.Range(0, obstacles.Length);
         
         Instantiate(obstacles[RandomIndex], SpawnPos, obstacles[RandomIndex].gameObject.transform.rotation);
