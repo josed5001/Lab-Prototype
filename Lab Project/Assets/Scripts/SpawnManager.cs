@@ -12,10 +12,13 @@ public class SpawnManager : MonoBehaviour
     private float xSpawn = -1.0f;
     private float zPowerupRange = 5.0f;
     private float ySpawn = 9.0f;
+
+    private float obstacleSpawnTime = 1.0f;
+    private float startDelay = 1.0f;
     // Start is called before the first frame update
     void Start()
     {
-        SpawnObstacle();
+        InvokeRepeating("SpawnObstacle", startDelay, obstacleSpawnTime);
     }
 
     // Update is called once per frame
