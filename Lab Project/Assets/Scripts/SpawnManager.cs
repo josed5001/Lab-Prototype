@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
 
     public GameObject[] obstacles;
-    public GameObject powerUps;
+    public GameObject[] powerUps;
     public Transform[] powerUpPos;
 
     private float zObstacleSpawn = 12.0f;
