@@ -6,8 +6,8 @@ public class SpawnManager : MonoBehaviour
 {
 
     public GameObject[] obstacles;
-    public GameObject powerUp;
-    public Vector3[] powerUpPos;
+    public GameObject [] powerUps;
+   public Vector3[] powerUpPos;
 
     private float zObstacleSpawn = 12.0f;
     private float xSpawn = -1.0f;
@@ -20,6 +20,8 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("SpawnObstacle", startDelay, obstacleSpawnTime);
+        InvokeRepeating("SpawnPowerUp", startDelay, obstacleSpawnTime);
+        
     }
 
     // Update is called once per frame
@@ -40,6 +42,10 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnPowerUp()
     {
+        //Vector3 powerupPos = new Vector3(xSpawn, ySpawn, zObstacleSpawn);
+        int PowerupIndex = Random.Range(0, powerUps.Length);
+        
+        Instantiate(powerUps[PowerupIndex], powerUpPos, powerUps[PowerupIndex].gameObject.transform.rotation);
         
     }
 }
