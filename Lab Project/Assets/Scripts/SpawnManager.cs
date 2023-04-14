@@ -6,7 +6,7 @@ public class SpawnManager : MonoBehaviour
 {
 
     public GameObject[] obstacles;
-    public GameObject [] powerUps;
+    public GameObject powerUps;
    public Vector3[] powerUpPos;
 
     private float zObstacleSpawn = 12.0f;
@@ -42,10 +42,10 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnPowerUp()
     {
-        //Vector3 powerupPos = new Vector3(xSpawn, ySpawn, zObstacleSpawn);
-        int PowerupIndex = Random.Range(0, powerUps.Length);
+        for (int i = 0; i < powerUpPos.Length; i++)
+        {
         
-        Instantiate(powerUps[PowerupIndex], powerUpPos, powerUps[PowerupIndex].gameObject.transform.rotation);
+        }
         
     }
 }
