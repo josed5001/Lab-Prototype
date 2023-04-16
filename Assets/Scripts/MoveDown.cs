@@ -6,22 +6,32 @@ public class MoveDown : MonoBehaviour
 {
 
     public float speed = 5.0f;
+    private float zDestroy = -110.0f;
 
-    private float zDestroy = -25.0f;
+    private SpawnManager spawnScript;
     private Rigidbody objectRb;
 
     // Start is called before the first frame update
     void Start()
     {
+        spawnScript = GameObject.Find("Spawn Manager").GetComponent<SpawnManager>();
         objectRb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (spawnScript.ObSpawnChange == true)
+        {
+            speed = 10f;
+        }
+
+           
+
         objectRb.AddForce(Vector3.forward * -speed);
 
-        if(transform.position.z < zDestroy)
+
+        if (transform.position.z < zDestroy)
         {
             Destroy(gameObject);
         }

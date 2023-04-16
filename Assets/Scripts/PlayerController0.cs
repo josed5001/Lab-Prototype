@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerController0 : MonoBehaviour
 {
     private float speed = 10.0f;
-    private float yBound = 17.5f;
-    private float yBound2 = 0.5f;
     private Rigidbody playerRb;
     // Start is called before the first frame update
     void Start()
@@ -18,7 +16,6 @@ public class PlayerController0 : MonoBehaviour
     void Update()
     {
         MovePlayer();
-        BoundariesPlayerPos();
         
     }
 
@@ -31,18 +28,7 @@ public class PlayerController0 : MonoBehaviour
         playerRb.AddForce(Vector3.up * speed * verticalInput);
         playerRb.AddForce(Vector3.right * speed * horizontalInput);
     }
-    // Set boundaries on the player
-    void BoundariesPlayerPos()
-    {
-        if(transform.position.y > yBound)
-        {
-            transform.position = new Vector3(transform.position.x, yBound);
-        }
-        if(transform.position.y < yBound2)
-        {
-            transform.position = new Vector3(transform.position.x, yBound2);
-        }
-    }
+  
 
     private void OnCollisionEnter(Collision collision)
     {
