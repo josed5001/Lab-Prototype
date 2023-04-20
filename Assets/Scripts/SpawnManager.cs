@@ -32,7 +32,7 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         // Increment the time elapsed
-        timeElapsed += Time.deltaTime;
+        timeElapsed = Time.time;
 
         // Check if # seconds has passed
         if (timeElapsed >= 30f)
