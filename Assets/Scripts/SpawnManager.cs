@@ -13,8 +13,8 @@ public class SpawnManager : MonoBehaviour
     private float xSpawn = -1.0f;
     private float ySpawn = 9.0f;
 
-    private float obstacleSpawnTime = 3.1f;
-    private float powerUpSpawnTime = 5.3f;
+    private float obstacleSpawnTime = 3f;
+    private float powerUpSpawnTime = 5f;
     private float startDelay = 1.0f;
 
     public bool ObSpawnChange = false;
@@ -39,7 +39,6 @@ public class SpawnManager : MonoBehaviour
         // Check if # seconds has passed
         if (timeElapsed > 30f)
         {
-            obstacleSpawnTime = 0.5f; //error: The obstacle spawn time does not change.
             ObSpawnChange = true;
         }
     }
