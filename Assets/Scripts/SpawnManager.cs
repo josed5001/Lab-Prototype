@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] obstacles;
     public GameObject[] powerUps;
     public Transform[] powerUpPos;
+    public GameObject spawnManagerM;
 
     private float zObstacleSpawn = 100.0f;
     private float xSpawn = -1.0f;
@@ -37,9 +39,11 @@ public class SpawnManager : MonoBehaviour
         timeElapsed = Time.time;
 
         // Check if # seconds has passed
-        if (timeElapsed > 30f)
+        if (timeElapsed > 10f)
         {
             ObSpawnChange = true;
+            SceneManager.LoadScene("Scene2");
+
         }
     }
 
@@ -89,5 +93,10 @@ public class SpawnManager : MonoBehaviour
         int PowerUpPosIndex = Random.Range(0, powerUpPos.Length);
 
         Instantiate(powerUps[PowerUpIndex], powerUpPos[PowerUpIndex].position, powerUps[PowerUpIndex].gameObject.transform.rotation);
+    }
+
+    public void TurnOff()
+    {
+        enabled = false;
     }
 }
