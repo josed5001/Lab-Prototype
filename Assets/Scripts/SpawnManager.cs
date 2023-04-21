@@ -9,7 +9,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] obstacles;
     public GameObject[] powerUps;
     public Transform[] powerUpPos;
-    public GameObject spawnManagerM;
+    
 
     private float zObstacleSpawn = 100.0f;
     private float xSpawn = -1.0f;
@@ -42,7 +42,6 @@ public class SpawnManager : MonoBehaviour
         if (timeElapsed > 10f)
         {
             ObSpawnChange = true;
-            SceneManager.LoadScene("Scene2");
 
         }
     }
