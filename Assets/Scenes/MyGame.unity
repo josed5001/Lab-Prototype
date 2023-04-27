@@ -477,6 +477,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5205350c54a44d0b160bd2f7137415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  easyDifficulty: {fileID: 4771430039343073921, guid: 46138d1f484134066be5d71db2b51040, type: 3}
+  mediumDifficulty: {fileID: 6313470209848916450, guid: a1222368425fa4b9591a1a18d26e994b, type: 3}
 --- !u!4 &305256052
 Transform:
   m_ObjectHideFlags: 0
