@@ -25,9 +25,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score += pointIncreasedPerSecond * Time.deltaTime;
+        if(isGameActive)
+        {score += pointIncreasedPerSecond * Time.deltaTime;
         int roundedScore = Mathf.RoundToInt(score);
         scoreText.text = "Score: " + roundedScore.ToString();
+        }
         
     }
     
