@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController0 : MonoBehaviour
 {
+    public GameManager GameManager;
     private float speed = 10.0f;
     private Rigidbody playerRb;
     // Start is called before the first frame update
@@ -35,6 +36,7 @@ public class PlayerController0 : MonoBehaviour
         if(collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Player collided with Obstacle");
+            GameManager.GameOver();
         }
     }
 
