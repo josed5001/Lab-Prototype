@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Obstacle
   - Powerup
+  - Level
+  - Easy
+  - Med
   layers:
   - Default
   - TransparentFX

@@ -1,49 +1,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject easyDifficulty;
+    public GameObject mediumDifficulty;
 
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI gameOverText;
-    public bool isGameActive;
-    private float score;
-    public float pointIncreasedPerSecond;
+    private float timeElapsed = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
-        isGameActive = true;
-         score = 0;
-        
-         pointIncreasedPerSecond = 10f;
-         
-            
+        easyDiff();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(isGameActive)
-        {score += pointIncreasedPerSecond * Time.deltaTime;
-        int roundedScore = Mathf.RoundToInt(score);
-        scoreText.text = "Score: " + roundedScore.ToString();
+        timeElapsed = Time.time;
+
+        if (timeElapsed > 10f)
+        {
+            destroyLevelWithTag("Level");
+    
+            medDiff();
+           
         }
-        
     }
-    
-    public void GameOver()
+
+    void easyDiff()
     {
-        gameOverText.gameObject.SetActive(true);
-        isGameActive = false;
+        Vector3 aSpawnPos = new Vector3(0, 0, 0);
+
+        Instantiate(easyDifficulty, aSpawnPos, easyDifficulty.gameObject.transform.rotation);
     }
-   
-    
-   
-    
 
+    void medDiff()
+    {
+        Vector3 aSpawnPos = new Vector3(0, 0, 0);
 
-    
-    
+        Instantiate(mediumDifficulty, aSpawnPos, mediumDifficulty.gameObject.transform.rotation);
+    }
+
+    void destroyLevelWithTag(string tag)
+    {
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject taggedObject in taggedObjects)
+        {
+            Destroy(taggedObject);
+        }
+    }
 }
