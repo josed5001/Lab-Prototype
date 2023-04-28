@@ -36,7 +36,7 @@ public class PlayerController0 : MonoBehaviour
         if(collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Player collided with Obstacle");
-            GameManager.GameOver();
+            //GameManager.GameOver();
         }
     }
 
