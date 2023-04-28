@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 4021227676935232616}
   m_Layer: 0
   m_Name: EasyDiff
-  m_TagString: Easy
+  m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
