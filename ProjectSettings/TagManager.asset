@@ -7,8 +7,7 @@ TagManager:
   - Obstacle
   - Powerup
   - Level
-  - Easy
-  - Med
+  - Level2
   layers:
   - Default
   - TransparentFX

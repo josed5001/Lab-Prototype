@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject easyDifficulty;
-    public GameObject mediumDifficulty;
+    public GameObject[] prefabDiff;
 
     private float timeElapsed = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        easyDiff();
+
     }
 
     // Update is called once per frame
@@ -23,32 +22,31 @@ public class GameManager : MonoBehaviour
         if (timeElapsed > 10f)
         {
             destroyLevelWithTag("Level");
-    
-            medDiff();
-           
+
         }
+
     }
 
-    void easyDiff()
-    {
-        Vector3 aSpawnPos = new Vector3(0, 0, 0);
-
-        Instantiate(easyDifficulty, aSpawnPos, easyDifficulty.gameObject.transform.rotation);
-    }
-
-    void medDiff()
-    {
-        Vector3 aSpawnPos = new Vector3(0, 0, 0);
-
-        Instantiate(mediumDifficulty, aSpawnPos, mediumDifficulty.gameObject.transform.rotation);
-    }
-
+   
     void destroyLevelWithTag(string tag)
     {
         GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
         foreach (GameObject taggedObject in taggedObjects)
         {
             Destroy(taggedObject);
+        }
+    }
+
+    IEnumerator prefabSpawn()
+    {
+        float spawnDelay = 1.0f;
+        int currentIndex = 0;
+
+        while (currentIndex < prefabDiff.Length)
+        {
+            Instantiate(prefabDiff[currentIndex], transform.position, prefabDiff[currentIndex].gameObject.transform.rotation);
+            currentIndex++;
+            yield return new WaitForSeconds(spawnDelay);
         }
     }
 }
