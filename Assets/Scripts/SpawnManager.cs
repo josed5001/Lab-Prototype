@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -9,7 +8,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] obstacles;
     public GameObject[] powerUps;
     public Transform[] powerUpPos;
-    
+    public  GameManager GameManager;
 
     private float zObstacleSpawn = 100.0f;
     private float xSpawn = -1.0f;
@@ -23,6 +22,7 @@ public class SpawnManager : MonoBehaviour
     private bool isSpawningWalls = false;
 
     private float timeElapsed = 0f;
+
     // Start is called before the first frame update
     void Start()
     { 
@@ -39,17 +39,17 @@ public class SpawnManager : MonoBehaviour
         timeElapsed = Time.time;
 
         // Check if # seconds has passed
-        if (timeElapsed > 10f)
+        if (timeElapsed > 30f)
         {
             ObSpawnChange = true;
-
         }
     }
 
 
-    private IEnumerator SpawnObstaclesRoutine()
+    public IEnumerator SpawnObstaclesRoutine()
     {
-	    // Wait for our start delay to make sure we mimic the previous InvokeRepeating behaviour.
+	    while(GameManager.isGameActive)
+        {// Wait for our start delay to make sure we mimic the previous InvokeRepeating behaviour.
 	    yield return new WaitForSeconds(startDelay);
 	    // This variable is class varible so that you can have this coroutine end gracefully from outside of the coroutine itself.
 	    isSpawningWalls = true;
@@ -75,6 +75,7 @@ public class SpawnManager : MonoBehaviour
 	    // Update our time elapsed by the amount of time we just waited for.
 	    timeElapsed += spawnTime;
 	    }
+        }
     }
 
 
@@ -92,10 +93,5 @@ public class SpawnManager : MonoBehaviour
         int PowerUpPosIndex = Random.Range(0, powerUpPos.Length);
 
         Instantiate(powerUps[PowerUpIndex], powerUpPos[PowerUpIndex].position, powerUps[PowerUpIndex].gameObject.transform.rotation);
-    }
-
-    public void TurnOff()
-    {
-        enabled = false;
     }
 }
