@@ -23,11 +23,14 @@ public class PlayerController0 : MonoBehaviour
     // Moves the Player Up/Down/Right/Left
     void MovePlayer()
     {
+        
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-
+        if (GameManager.isGameActive)
+        {
         playerRb.AddForce(Vector3.up * speed * verticalInput);
         playerRb.AddForce(Vector3.right * speed * horizontalInput);
+        }
     }
   
 

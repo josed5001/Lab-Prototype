@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] obstacles;
     public GameObject[] powerUps;
     public Transform[] powerUpPos;
+    public  GameManager GameManager;
 
     private float zObstacleSpawn = 100.0f;
     private float xSpawn = -1.0f;
@@ -21,6 +22,7 @@ public class SpawnManager : MonoBehaviour
     private bool isSpawningWalls = false;
 
     private float timeElapsed = 0f;
+
     // Start is called before the first frame update
     void Start()
     { 
@@ -44,9 +46,10 @@ public class SpawnManager : MonoBehaviour
     }
 
 
-    private IEnumerator SpawnObstaclesRoutine()
+    public IEnumerator SpawnObstaclesRoutine()
     {
-	    // Wait for our start delay to make sure we mimic the previous InvokeRepeating behaviour.
+	    while(GameManager.isGameActive)
+        {// Wait for our start delay to make sure we mimic the previous InvokeRepeating behaviour.
 	    yield return new WaitForSeconds(startDelay);
 	    // This variable is class varible so that you can have this coroutine end gracefully from outside of the coroutine itself.
 	    isSpawningWalls = true;
@@ -72,6 +75,7 @@ public class SpawnManager : MonoBehaviour
 	    // Update our time elapsed by the amount of time we just waited for.
 	    timeElapsed += spawnTime;
 	    }
+        }
     }
 
 
