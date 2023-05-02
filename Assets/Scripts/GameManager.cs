@@ -7,24 +7,24 @@ public class GameManager : MonoBehaviour
     public GameObject[] prefabDiff;
 
     private float timeElapsed = 0f;
+    private float timeDelay = 10f;
+    private float deleteDelay = 9.5f;
+    private bool gameIsOn = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(prefabSpawn());
+        InvokeRepeating("destroyFun", deleteDelay, deleteDelay);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeElapsed = Time.time;
-
-        if (timeElapsed > 10f)
-        {
-            destroyLevelWithTag("Level");
-
-        }
-
+       
+        
     }
 
    
@@ -37,16 +37,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void destroyFun()
+    {
+        destroyLevelWithTag("Level");
+    }
+
+
+
+
     IEnumerator prefabSpawn()
     {
-        float spawnDelay = 1.0f;
         int currentIndex = 0;
 
         while (currentIndex < prefabDiff.Length)
         {
             Instantiate(prefabDiff[currentIndex], transform.position, prefabDiff[currentIndex].gameObject.transform.rotation);
             currentIndex++;
-            yield return new WaitForSeconds(spawnDelay);
+
+            yield return new WaitForSeconds(timeDelay);
         }
     }
 }
