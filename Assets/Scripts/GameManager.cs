@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
-    public bool isGameActive;
+    public bool isGameActive = false;
     private float score;
     public float pointIncreasedPerSecond;
     // Start is called before the first frame update
