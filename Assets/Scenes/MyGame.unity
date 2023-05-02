@@ -477,8 +477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88576648abe6d4fe399774e792b351f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  easyDifficulty: {fileID: 4771430039343073921, guid: 46138d1f484134066be5d71db2b51040, type: 3}
-  mediumDifficulty: {fileID: 6313470209848916450, guid: a1222368425fa4b9591a1a18d26e994b, type: 3}
+  prefabDiff:
+  - {fileID: 4771430039343073921, guid: 46138d1f484134066be5d71db2b51040, type: 3}
+  - {fileID: 6313470209848916450, guid: a1222368425fa4b9591a1a18d26e994b, type: 3}
 --- !u!4 &305256052
 Transform:
   m_ObjectHideFlags: 0
@@ -1222,7 +1223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1029676356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1408,7 +1409,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  obDirectionPosx: 15
+  PobDirectionPosx: 5
+  NobDirectionPosx: 7
 --- !u!1 &1355196549
 GameObject:
   m_ObjectHideFlags: 0

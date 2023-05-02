@@ -5,7 +5,8 @@ using UnityEngine;
 public class ObstacleMove : MonoBehaviour
 {
     public float moveSpeed = 5f;
-    public float obDirectionPosx =  15f;
+    public float PobDirectionPosx =  15f;
+    public float NobDirectionPosx = 5f;
     private bool movingRight = true;
     // Start is called before the first frame update
     void Start()
@@ -24,11 +25,11 @@ public class ObstacleMove : MonoBehaviour
         {
             transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
         }
-        if (transform.position.x >= obDirectionPosx && movingRight)
+        if (transform.position.x >= PobDirectionPosx && movingRight)
         {
             movingRight = false;
         }
-        else if (transform.position.x <= -obDirectionPosx && !movingRight)
+        else if (transform.position.x <= -NobDirectionPosx && !movingRight)
         {
             movingRight = true;
         }

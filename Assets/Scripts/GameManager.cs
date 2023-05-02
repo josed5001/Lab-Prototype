@@ -4,51 +4,57 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject easyDifficulty;
-    public GameObject mediumDifficulty;
+    public GameObject[] prefabDiff;
 
     private float timeElapsed = 0f;
+    private float timeDelay = 10f;
+    private float deleteDelay = 9.5f;
+    private bool gameIsOn = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        easyDiff();
+        StartCoroutine(prefabSpawn());
+        InvokeRepeating("destroyFun", deleteDelay, deleteDelay);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeElapsed = Time.time;
-
-        if (timeElapsed > 10f)
-        {
-            destroyLevelWithTag("Level");
-    
-            medDiff();
-           
-        }
+       
+        
     }
 
-    void easyDiff()
-    {
-        Vector3 aSpawnPos = new Vector3(0, 0, 0);
-
-        Instantiate(easyDifficulty, aSpawnPos, easyDifficulty.gameObject.transform.rotation);
-    }
-
-    void medDiff()
-    {
-        Vector3 aSpawnPos = new Vector3(0, 0, 0);
-
-        Instantiate(mediumDifficulty, aSpawnPos, mediumDifficulty.gameObject.transform.rotation);
-    }
-
+   
     void destroyLevelWithTag(string tag)
     {
         GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
         foreach (GameObject taggedObject in taggedObjects)
         {
             Destroy(taggedObject);
+        }
+    }
+
+    void destroyFun()
+    {
+        destroyLevelWithTag("Level");
+    }
+
+
+
+
+    IEnumerator prefabSpawn()
+    {
+        int currentIndex = 0;
+
+        while (currentIndex < prefabDiff.Length)
+        {
+            Instantiate(prefabDiff[currentIndex], transform.position, prefabDiff[currentIndex].gameObject.transform.rotation);
+            currentIndex++;
+
+            yield return new WaitForSeconds(timeDelay);
         }
     }
 }
