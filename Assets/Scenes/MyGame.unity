@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.37935638, g: 0.38948703, b: 0.37167463, a: 1}
+  m_IndirectSpecularColor: {r: 0.3793571, g: 0.38948783, b: 0.37167495, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -464,7 +464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &305256051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +480,10 @@ MonoBehaviour:
   prefabDiff:
   - {fileID: 4771430039343073921, guid: 46138d1f484134066be5d71db2b51040, type: 3}
   - {fileID: 6313470209848916450, guid: a1222368425fa4b9591a1a18d26e994b, type: 3}
+  scoreText: {fileID: 0}
+  gameOverText: {fileID: 0}
+  isGameActive: 0
+  pointIncreasedPerSecond: 0
 --- !u!4 &305256052
 Transform:
   m_ObjectHideFlags: 0
@@ -2158,6 +2162,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4861346252564229504, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 305256051}
     - target: {fileID: 4861346252564229510, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
       propertyPath: m_RootOrder
       value: 2

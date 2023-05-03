@@ -10,13 +10,18 @@ public class PlayerController0 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+       
         playerRb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        MovePlayer();
+        if (GameManager.isGameActive == true)
+        {
+            MovePlayer();
+        }
+            
         
     }
 
@@ -26,11 +31,10 @@ public class PlayerController0 : MonoBehaviour
         
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        if (GameManager.isGameActive)
-        {
+       
         playerRb.AddForce(Vector3.up * speed * verticalInput);
         playerRb.AddForce(Vector3.right * speed * horizontalInput);
-        }
+
     }
   
 
@@ -39,7 +43,10 @@ public class PlayerController0 : MonoBehaviour
         if(collision.gameObject.CompareTag("Obstacle"))
         {
             Debug.Log("Player collided with Obstacle");
-            //GameManager.GameOver();
+            GameManager.isGameActive = false;
+            GameManager.TurnOff();
+            
+
         }
     }
 

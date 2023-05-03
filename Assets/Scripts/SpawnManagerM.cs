@@ -17,7 +17,7 @@ public class SpawnManagerM : MonoBehaviour
     {
         if (spawnScript1.ObSpawnChange == true)
         {
-            spawnScript1.TurnOff();
+
         }
     }
 }
