@@ -7,10 +7,16 @@ public class PlayerController0 : MonoBehaviour
     public GameManager GameManager;
     private float speed = 10.0f;
     private Rigidbody playerRb;
+
+
+    public AudioSource playerAudio;
+    public AudioClip crashSound;
+    public AudioClip powerupSound;
     // Start is called before the first frame update
     void Start()
     {
-       
+        playerAudio = GetComponent<AudioSource>();
+
         playerRb = GetComponent<Rigidbody>();
     }
 
@@ -42,6 +48,7 @@ public class PlayerController0 : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Obstacle"))
         {
+            playerAudio.PlayOneShot(crashSound, 1.0f);
             Debug.Log("Player collided with Obstacle");
             GameManager.isGameActive = false;
             GameManager.TurnOff();
@@ -55,6 +62,7 @@ public class PlayerController0 : MonoBehaviour
         if(other.gameObject.CompareTag("Powerup"))
         {
             Destroy(other.gameObject);
+            playerAudio.PlayOneShot(powerupSound, 1.0f);
         }
     }
 }
