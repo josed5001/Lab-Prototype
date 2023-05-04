@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
         destroyObjectWithTag("Level");
     }
 
-    void GameOver()
+    public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
         isGameActive = false;

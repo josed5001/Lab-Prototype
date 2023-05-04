@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.3793564, g: 0.38948703, b: 0.37167463, a: 1}
+  m_IndirectSpecularColor: {r: 0.37935638, g: 0.38948703, b: 0.37167463, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -717,8 +717,8 @@ MonoBehaviour:
   prefabDiff:
   - {fileID: 4771430039343073921, guid: 46138d1f484134066be5d71db2b51040, type: 3}
   - {fileID: 6313470209848916450, guid: a1222368425fa4b9591a1a18d26e994b, type: 3}
-  scoreText: {fileID: 0}
-  gameOverText: {fileID: 0}
+  scoreText: {fileID: 1019793183}
+  gameOverText: {fileID: 275430938}
   isGameActive: 0
   pointIncreasedPerSecond: 0
 --- !u!4 &305256052
