@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] prefabDiff;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI titleText;
     private float timeDelay = 15f;
     private float deleteDelay = 14.5f;
     private float score;
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(prefabSpawn());
         InvokeRepeating("destroyFun", deleteDelay, deleteDelay);
         isGameActive = true;
+        scoreText.gameObject.SetActive(true);
         score = 0;
         pointIncreasedPerSecond = 10f;
          
@@ -55,7 +57,7 @@ public class GameManager : MonoBehaviour
         destroyObjectWithTag("Level");
     }
 
-    void GameOver()
+    public void GameOver()
     {
         gameOverText.gameObject.SetActive(true);
         isGameActive = false;

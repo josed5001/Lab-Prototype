@@ -44,6 +44,7 @@ public class PlayerController0 : MonoBehaviour
         {
             Debug.Log("Player collided with Obstacle");
             GameManager.isGameActive = false;
+            GameManager.GameOver();
             GameManager.TurnOff();
             
 
