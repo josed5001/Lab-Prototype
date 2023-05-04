@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         StartCoroutine(prefabSpawn());
         InvokeRepeating("destroyFun", deleteDelay, deleteDelay);
         isGameActive = true;
+        titleText.gameObject.SetActive(false);
         scoreText.gameObject.SetActive(true);
         score = 0;
         pointIncreasedPerSecond = 10f;

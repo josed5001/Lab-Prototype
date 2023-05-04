@@ -720,6 +720,7 @@ MonoBehaviour:
   - {fileID: 6313470209848916450, guid: a1222368425fa4b9591a1a18d26e994b, type: 3}
   scoreText: {fileID: 1019793183}
   gameOverText: {fileID: 275430938}
+  titleText: {fileID: 414556705}
   isGameActive: 0
   pointIncreasedPerSecond: 0
 --- !u!4 &305256052
