@@ -77,10 +77,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid_1
       objectReference: {fileID: 0}
-    - target: {fileID: 2942051580892192243, guid: d57d6419728ca4fa486055a9b54eb326, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
     - target: {fileID: 7338618689535840697, guid: d57d6419728ca4fa486055a9b54eb326, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -139,40 +135,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d57d6419728ca4fa486055a9b54eb326, type: 3}
---- !u!1 &4086213650794081230 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2942051580892192243, guid: d57d6419728ca4fa486055a9b54eb326, type: 3}
-  m_PrefabInstance: {fileID: 1180332300867106365}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &7248954274616343140
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4086213650794081230}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!65 &7839742667122060805
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4086213650794081230}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.019999998, y: 0.02, z: 0.019999996}
-  m_Center: {x: -0.0000000023283062, y: -0.000000005587935, z: 2.646978e-23}
 --- !u!4 &8482920398018176900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7338618689535840697, guid: d57d6419728ca4fa486055a9b54eb326, type: 3}
@@ -245,10 +207,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid_3
       objectReference: {fileID: 0}
-    - target: {fileID: 8003495884289897023, guid: 2408f749a3ad04e23b2abe82997c4b61, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2408f749a3ad04e23b2abe82997c4b61, type: 3}
 --- !u!4 &3919096583551648187 stripped
@@ -256,40 +214,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3227043935615972179, guid: 2408f749a3ad04e23b2abe82997c4b61, type: 3}
   m_PrefabInstance: {fileID: 1921821843107148520}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8482969507644211415 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8003495884289897023, guid: 2408f749a3ad04e23b2abe82997c4b61, type: 3}
-  m_PrefabInstance: {fileID: 1921821843107148520}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &8895377863953331033
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8482969507644211415}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!65 &3067178602281399649
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8482969507644211415}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.019021157, y: 0.019999996, z: 0.019999994}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &5598876013125921238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -300,10 +224,6 @@ PrefabInstance:
     - target: {fileID: 3539412230784186596, guid: 607f852e894b2474e8037bde96a3f38c, type: 3}
       propertyPath: m_Name
       value: Asteroid_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3539412230784186596, guid: 607f852e894b2474e8037bde96a3f38c, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 5599830857172574808, guid: 607f852e894b2474e8037bde96a3f38c, type: 3}
       propertyPath: m_RootOrder
@@ -368,40 +288,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5599830857172574808, guid: 607f852e894b2474e8037bde96a3f38c, type: 3}
   m_PrefabInstance: {fileID: 5598876013125921238}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8984031144689471794 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3539412230784186596, guid: 607f852e894b2474e8037bde96a3f38c, type: 3}
-  m_PrefabInstance: {fileID: 5598876013125921238}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &4963554660132125048
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8984031144689471794}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!65 &3426491470888169817
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8984031144689471794}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.020000001, z: 0.019999998}
-  m_Center: {x: -0.0000000023283064, y: 0.0000000055879354, z: -0.0000000027939677}
 --- !u!1001 &6924031388959706505
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -469,46 +355,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Asteroid_4
       objectReference: {fileID: 0}
-    - target: {fileID: 3712215468181072183, guid: e0cfb534d47614c7b825642df2d44a40, type: 3}
-      propertyPath: m_TagString
-      value: Obstacle
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0cfb534d47614c7b825642df2d44a40, type: 3}
---- !u!1 &6022273194696484030 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3712215468181072183, guid: e0cfb534d47614c7b825642df2d44a40, type: 3}
-  m_PrefabInstance: {fileID: 6924031388959706505}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &5714137518517789284
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6022273194696484030}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
---- !u!65 &7953255949099023246
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6022273194696484030}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.020000001, z: 0.019999998}
-  m_Center: {x: -0.0000000023283064, y: -0.0000000018626449, z: -2.646978e-23}
 --- !u!4 &8636508259530342705 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1714766844072660152, guid: e0cfb534d47614c7b825642df2d44a40, type: 3}
