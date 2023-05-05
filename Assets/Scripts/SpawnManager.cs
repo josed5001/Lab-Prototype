@@ -8,6 +8,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] obstacles;
     public GameObject[] powerUps;
     public Transform[] powerUpPos;
+    public GameDifficulty gameDifficulty;
 
     private float zObstacleSpawn = 100.0f;
     private float xSpawn = -1.0f;
@@ -41,8 +42,10 @@ public class SpawnManager : MonoBehaviour
             ObSpawnChange = true;
         }
     }
-
-
+    public void SpawnRoutine()
+    {
+        
+    }
     public IEnumerator SpawnObstaclesRoutine()
     {
 	    
@@ -75,6 +78,7 @@ public class SpawnManager : MonoBehaviour
 	    }
         
     }
+    
 
 
     void SpawnObstacle()
