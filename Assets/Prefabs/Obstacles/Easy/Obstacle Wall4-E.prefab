@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 3762980247381592185}
   m_Layer: 0
   m_Name: Obstacle 2
-  m_TagString: Powerup
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 5710213328702172568}
   m_Layer: 0
   m_Name: Obstacle
-  m_TagString: Powerup
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -308,7 +308,7 @@ GameObject:
   - component: {fileID: 3331978165380888516}
   m_Layer: 0
   m_Name: Obstacle 3
-  m_TagString: Powerup
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
