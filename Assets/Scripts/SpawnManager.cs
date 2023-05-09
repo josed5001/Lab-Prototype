@@ -14,24 +14,18 @@ public class SpawnManager : MonoBehaviour
     private float xSpawn = -1.0f;
     private float ySpawn = 9.0f;
 
-    private float obstacleSpawnTime = 3f;
+    public float obstacleSpawnTime = 3f;
     private float powerUpSpawnTime = 5f;
-    private float startDelay = 1.0f;
+    public float startDelay = 1.0f;
     public bool ObSpawnChange = false;
-    private bool isSpawningWalls = false;
+    public bool isSpawningWalls = false;
 
     private float timeElapsed = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-        
         InvokeRepeating("SpawnPowerUp", startDelay, powerUpSpawnTime);
-        StartCoroutine(GameDifficulty.SpawnObstaclesRoutine());
-    
-        
-        
     }
 
     // Update is called once per frame
@@ -53,9 +47,9 @@ public class SpawnManager : MonoBehaviour
         // Spawn the obstacle.
         SpawnObstacle();
         // Yield for spawnTime seconds. This is an "asynchronous" wait operation, so everything not in this coroutine will continue.
-        yield return new WaitForSeconds(spawnTime);
+        yield return new WaitForSeconds(gameDifficulty.spawnTime);
         // Update our time elapsed by the amount of time we just waited for.
-        timeElapsed += spawnTime;
+        timeElapsed += gameDifficulty.spawnTime;
     }
     
             
