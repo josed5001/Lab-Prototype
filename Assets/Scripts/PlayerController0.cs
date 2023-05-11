@@ -10,6 +10,7 @@ public class PlayerController0 : MonoBehaviour
 
 
     public AudioSource playerAudio;
+    public AudioClip GameOverSound;
     public AudioClip crashSound;
     public AudioClip powerupSound;
     // Start is called before the first frame update
@@ -49,6 +50,7 @@ public class PlayerController0 : MonoBehaviour
         if(collision.gameObject.CompareTag("Obstacle"))
         {
             playerAudio.PlayOneShot(crashSound, 1.0f);
+            playerAudio.PlayOneShot(GameOverSound, 1.0f);
             Debug.Log("Player collided with Obstacle");
             GameManager.isGameActive = false;
             GameManager.GameOver();
