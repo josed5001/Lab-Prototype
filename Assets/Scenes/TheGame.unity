@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 507538982}
   - component: {fileID: 507538981}
   - component: {fileID: 507538980}
+  - component: {fileID: 507538984}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -559,6 +560,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &507538984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507538979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e98b296298e04db09d1766e9e6c914a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619584152
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,6 +829,7 @@ GameObject:
   - component: {fileID: 1029325124}
   - component: {fileID: 1029325123}
   - component: {fileID: 1029325122}
+  - component: {fileID: 1029325125}
   m_Layer: 0
   m_Name: Wall 4
   m_TagString: Untagged
@@ -901,6 +915,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029325120}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1029325125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029325120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e98b296298e04db09d1766e9e6c914a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1042477097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1266,7 +1292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1491841971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,7 +1327,6 @@ MonoBehaviour:
   - {fileID: 6667326972120564766, guid: 00f7b7f18cbf3487eaa098ee983877bd, type: 3}
   - {fileID: 6667326972120564766, guid: 0d1ba013cd450440c88b0d4c53d14291, type: 3}
   - {fileID: 6667326972120564766, guid: 62237c2d21c2e4728aa74d7a01f4ce70, type: 3}
-  gameDifficulty: {fileID: 1434367902}
   obstacleSpawnTime: 3
   startDelay: 1
   ObSpawnChange: 0
@@ -1384,6 +1409,7 @@ GameObject:
   - component: {fileID: 1599482603}
   - component: {fileID: 1599482602}
   - component: {fileID: 1599482601}
+  - component: {fileID: 1599482604}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Untagged
@@ -1469,6 +1495,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599482599}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1599482604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599482599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e98b296298e04db09d1766e9e6c914a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1802532230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1519,7 @@ GameObject:
   - component: {fileID: 1802532234}
   - component: {fileID: 1802532233}
   - component: {fileID: 1802532232}
+  - component: {fileID: 1802532235}
   m_Layer: 0
   m_Name: Wall3
   m_TagString: Untagged
@@ -1566,6 +1605,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1802532230}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1802532235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802532230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e98b296298e04db09d1766e9e6c914a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1815447604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1872,6 +1923,7 @@ GameObject:
   - component: {fileID: 1985757121}
   - component: {fileID: 1985757120}
   - component: {fileID: 1985757119}
+  - component: {fileID: 1985757122}
   m_Layer: 0
   m_Name: Wall2
   m_TagString: Untagged
@@ -1957,3 +2009,15 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985757117}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1985757122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985757117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e98b296298e04db09d1766e9e6c914a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
