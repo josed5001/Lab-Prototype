@@ -2761,9 +2761,25 @@ PrefabInstance:
       propertyPath: powerupSound
       value: 
       objectReference: {fileID: 8300000, guid: f73c7c70d15254846b6b1ccfc71d07d3, type: 3}
+    - target: {fileID: 4861346252564229509, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 1c43257c3c2b67241adbe1cb13eb5305, type: 3}
     - target: {fileID: 4861346252564229510, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861346252564229510, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861346252564229510, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4861346252564229510, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4861346252564229510, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
       propertyPath: m_LocalPosition.x
