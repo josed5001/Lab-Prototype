@@ -15,6 +15,9 @@ public class SpawnManager : MonoBehaviour
     private float xSpawn = -1.0f;
     private float ySpawn = 9.0f;
 
+    public Vector3 bottomLeftCorner;
+    public Vector3 topRightCorner;
+
     
     private float powerUpSpawnTime = 5f;
     public float startDelay = 1.0f;
@@ -60,7 +63,7 @@ public class SpawnManager : MonoBehaviour
 	    while (isSpawningWalls)
 	    {
             // Check if our elapsedTime has exceeded the amount of time we want between speed increases.
-	        if (timeElapsed > 10f)
+	        if (timeElapsed > 11f)
 	        {
                 // If it has, then decrease the spawnTime by our desired amount.
                 // Use a Mathf.Max() function so that we never go below our minimum value (which should be >0f)
@@ -94,6 +97,10 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnPowerUp()
     {
+        float x = Random.Range(bottomLeftCorner.x, topRightCorner.x);
+        float y = Random.Range(bottomLeftCorner.y, topRightCorner.y);
+        Vector3 spawnPosition = new Vector3(x, y, 0);
+
         int PowerUpIndex = Random.Range(0, powerUps.Length);
         int PowerUpPosIndex = Random.Range(0, powerUpPos.Length);
 

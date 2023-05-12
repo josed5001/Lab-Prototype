@@ -6,7 +6,7 @@ public class GameDifficulty : MonoBehaviour
 {
     
     public float obstacleSpawnTime = 3f;
-    public float subtractValue = 1f;
+    public float Value = 2f;
 
     private float timer = 0f;
     // Start is called before the first frame update
@@ -21,9 +21,9 @@ public class GameDifficulty : MonoBehaviour
        
         if(timer > 10f)
         {
-            obstacleSpawnTime -= subtractValue;
+            obstacleSpawnTime /= Value;
 
-            timer = 0f;
+            
         }
     }
     
