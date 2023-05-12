@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveDown : MonoBehaviour
 {
 
-    public float speed = 5.0f;
+    public float speed = 2.5f;
     private float zDestroy = -110.0f;
 
     private SpawnManager spawnScript;
