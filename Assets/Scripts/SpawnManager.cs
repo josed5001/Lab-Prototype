@@ -8,13 +8,14 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] obstacles;
     public GameObject[] powerUps;
     public Transform[] powerUpPos;
+    private GameDifficulty gameDifficulty;
 
 
     private float zObstacleSpawn = 100.0f;
     private float xSpawn = -1.0f;
     private float ySpawn = 9.0f;
 
-    public float obstacleSpawnTime = 3f;
+    
     private float powerUpSpawnTime = 5f;
     public float startDelay = 1.0f;
     public bool ObSpawnChange = false;
@@ -25,6 +26,7 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameDifficulty = GameObject.Find("GameDifficulty").GetComponent<GameDifficulty>();
         InvokeRepeating("SpawnPowerUp", startDelay, powerUpSpawnTime);
         StartCoroutine(SpawnObstaclesRoutine());
     }
@@ -52,13 +54,13 @@ public class SpawnManager : MonoBehaviour
         // This variable is class varible so that you can have this coroutine end gracefully from outside of the coroutine itself.
         isSpawningWalls = true;
         // Start with the default spawn time.
-        float spawnTime = obstacleSpawnTime;
+        float spawnTime = gameDifficulty.obstacleSpawnTime;
 	    float minimumSpawnTime = 0.1f;
 	    float timeElapsed = 0f;
 	    while (isSpawningWalls)
 	    {
             // Check if our elapsedTime has exceeded the amount of time we want between speed increases.
-	        if (timeElapsed > 30f)
+	        if (timeElapsed > 10f)
 	        {
                 // If it has, then decrease the spawnTime by our desired amount.
                 // Use a Mathf.Max() function so that we never go below our minimum value (which should be >0f)

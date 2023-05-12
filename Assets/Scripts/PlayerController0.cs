@@ -50,9 +50,9 @@ public class PlayerController0 : MonoBehaviour
         {
             playerAudio.PlayOneShot(crashSound, 1.0f);
             Debug.Log("Player collided with Obstacle");
-            //GameManager.isGameActive = false;
-            //GameManager.GameOver();
-           // GameManager.TurnOff();
+            GameManager.isGameActive = false;
+            GameManager.GameOver();
+            GameManager.TurnOff();
         }
     }
 
