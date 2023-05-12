@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DifficultyButton : MonoBehaviour
+public class PlayButton : MonoBehaviour
 {
     private Button button;
     private GameManager gameManager;
@@ -12,7 +12,7 @@ public class DifficultyButton : MonoBehaviour
     {
         button = GetComponent<Button>();
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
-        button.onClick.AddListener(SetDifficulty);
+        button.onClick.AddListener(PlayStart);
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class DifficultyButton : MonoBehaviour
         
     }
 
-    void SetDifficulty()
+    void PlayStart()
     {
         Debug.Log(button.gameObject.name + " was clicked");
         gameManager.StartGame();
