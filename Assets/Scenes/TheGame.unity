@@ -1193,7 +1193,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabDiff:
-  - {fileID: 9133637623245653702, guid: b8dc0fb42eda547639198e3d718f5923, type: 3}
+  - {fileID: 9140067408356405992, guid: 46138d1f484134066be5d71db2b51040, type: 3}
+  - {fileID: 6313470209848916450, guid: a1222368425fa4b9591a1a18d26e994b, type: 3}
   scoreText: {fileID: 365623610}
   gameOverText: {fileID: 280608448}
   isGameActive: 0
