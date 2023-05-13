@@ -1592,6 +1592,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4861346252564229511, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
+      propertyPath: m_Constraints
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 4861346252564229514, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
       propertyPath: m_Name
       value: PlayerCube
