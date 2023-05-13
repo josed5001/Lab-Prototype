@@ -15,8 +15,8 @@ public class SpawnManager : MonoBehaviour
     private float xSpawn = -1.0f;
     private float ySpawn = 9.0f;
 
-    public Vector3 bottomLeftCorner;
-    public Vector3 topRightCorner;
+    private Vector3 bottomLeftCorner;
+    private Vector3 topRightCorner;
 
     
     private float powerUpSpawnTime = 5f;
@@ -29,6 +29,9 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bottomLeftCorner = new Vector3(-8.5f, 1f, 100f);
+        topRightCorner = new Vector3(6.5f, 16f, 100f);
+
         gameDifficulty = GameObject.Find("GameDifficulty").GetComponent<GameDifficulty>();
         InvokeRepeating("SpawnPowerUp", startDelay, powerUpSpawnTime);
         StartCoroutine(SpawnObstaclesRoutine());
@@ -99,12 +102,10 @@ public class SpawnManager : MonoBehaviour
     {
         float x = Random.Range(bottomLeftCorner.x, topRightCorner.x);
         float y = Random.Range(bottomLeftCorner.y, topRightCorner.y);
-        Vector3 spawnPosition = new Vector3(x, y, 0);
-
+        Vector3 spawnPosition = new Vector3(x, y, 100);
         int PowerUpIndex = Random.Range(0, powerUps.Length);
-        int PowerUpPosIndex = Random.Range(0, powerUpPos.Length);
 
-        Instantiate(powerUps[PowerUpIndex], powerUpPos[PowerUpIndex].position, powerUps[PowerUpIndex].gameObject.transform.rotation);
+        Instantiate(powerUps[PowerUpIndex], spawnPosition, Quaternion.identity);
     }
 
    

@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
 
             if (currentIndex >= prefabDiff.Length) // check if currentIndex has reached the end of the array
             {
-                currentIndex = 0; // reset currentIndex to 0 to start over from the beginning of the array
+               currentIndex = 0;  //reset currentIndex to 0 to start over from the beginning of the array
             }
             yield return new WaitForSeconds(timeDelay);
         }
