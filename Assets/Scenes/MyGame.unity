@@ -1778,14 +1778,14 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 197
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -1882,6 +1882,10 @@ PrefabInstance:
       propertyPath: powerupSound
       value: 
       objectReference: {fileID: 8300000, guid: f73c7c70d15254846b6b1ccfc71d07d3, type: 3}
+    - target: {fileID: 4861346252564229504, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
+      propertyPath: GameOverSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e04b40589bc4444dca55c26ad5028fd6, type: 3}
     - target: {fileID: 4861346252564229509, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
       propertyPath: m_Mesh
       value: 
