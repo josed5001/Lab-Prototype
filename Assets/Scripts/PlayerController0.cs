@@ -21,6 +21,11 @@ public class PlayerController0 : MonoBehaviour
     private Quaternion targetRotation;
     private bool isRotating = false;
 
+    public bool Powerup1 = false;
+    public bool Powerup2 = false;
+    public bool Powerup3 = false;
+    public bool Powerup4 = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -114,6 +119,25 @@ public class PlayerController0 : MonoBehaviour
         {
             Destroy(other.gameObject);
             playerAudio.PlayOneShot(powerupSound, 1.0f);
+            Powerup1 = true;
+        }
+        if(other.gameObject.CompareTag("PowerUp2"))
+        {
+            Destroy(other.gameObject);
+            playerAudio.PlayOneShot(powerupSound, 1.0f);
+            Powerup2 = true;
+        }
+        if(other.gameObject.CompareTag("PowerUp3"))
+        {
+            Destroy(other.gameObject);
+            playerAudio.PlayOneShot(powerupSound, 1.0f);
+            Powerup3 = true;
+        }
+        if(other.gameObject.CompareTag("PowerUp4"))
+        {
+            Destroy(other.gameObject);
+            playerAudio.PlayOneShot(powerupSound, 1.0f);
+            Powerup4 = true;
         }
     }
 

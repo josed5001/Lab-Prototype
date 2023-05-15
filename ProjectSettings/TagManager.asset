@@ -8,6 +8,9 @@ TagManager:
   - Powerup
   - Level
   - Level2
+  - PowerUp2
+  - PowerUp3
+  - PowerUp4
   layers:
   - Default
   - TransparentFX
