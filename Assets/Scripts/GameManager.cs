@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
     public GameObject titleScreen;
+    public Button restart;
     private float timeDelay = 15f;
     private float deleteDelay = 14.5f;
     private float score;
@@ -64,14 +65,16 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        
         gameOverText.gameObject.SetActive(true);
+        restart.gameObject.SetActive(true);
         isGameActive = false;
         
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Spawn Level Prefabs
