@@ -488,8 +488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabDiff:
-  - {fileID: 9133637623245653702, guid: b8dc0fb42eda547639198e3d718f5923, type: 3}
-  - {fileID: 5538544899975893147, guid: 9c5a89fc8cdda461e8f673191eed3b3f, type: 3}
+  - {fileID: 9140067408356405992, guid: 46138d1f484134066be5d71db2b51040, type: 3}
+  - {fileID: 6313470209848916450, guid: a1222368425fa4b9591a1a18d26e994b, type: 3}
   scoreText: {fileID: 1019793183}
   gameOverText: {fileID: 275430938}
   isGameActive: 0
@@ -1431,8 +1431,6 @@ MonoBehaviour:
   - {fileID: 6667326972120564766, guid: 00f7b7f18cbf3487eaa098ee983877bd, type: 3}
   - {fileID: 6667326972120564766, guid: 0d1ba013cd450440c88b0d4c53d14291, type: 3}
   - {fileID: 6667326972120564766, guid: 62237c2d21c2e4728aa74d7a01f4ce70, type: 3}
-  gameDifficulty: {fileID: 1619881912}
-  obstacleSpawnTime: 3
   startDelay: 1
   ObSpawnChange: 0
   isSpawningWalls: 0
@@ -1577,10 +1575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea68d8b0d85b645609e40d9f8915a892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnManager: {fileID: 0}
-  spawnTime: 1
-  minimumSpawnTime: 0.1
-  timeElapsed: 0
+  obstacleSpawnTime: 3
+  Value: 2
 --- !u!4 &1619881913
 Transform:
   m_ObjectHideFlags: 0
