@@ -13,12 +13,21 @@ public class PlayerController0 : MonoBehaviour
     public AudioClip GameOverSound;
     public AudioClip crashSound;
     public AudioClip powerupSound;
+
+    public float rotationAmount = 10f;  // Amount of rotation in degrees
+    public float rotationSpeed = 5f;    // Speed of rotation
+    public float returnSpeed = 2f;      // Speed of returning to the initial rotation
+    private Quaternion initialRotation;
+    private Quaternion targetRotation;
+    private bool isRotating = false;
+
     // Start is called before the first frame update
     void Start()
     {
         playerAudio = GetComponent<AudioSource>();
 
         playerRb = GetComponent<Rigidbody>();
+        initialRotation = transform.rotation;
     }
 
     // Update is called once per frame
@@ -27,6 +36,47 @@ public class PlayerController0 : MonoBehaviour
         if (GameManager.isGameActive == true)
         {
             MovePlayer();
+
+            // Check for input to initiate rotation
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+            {
+                isRotating = true;
+            }
+
+            // Check for input release to stop rotation and return to initial rotation
+            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.D))
+            {
+                isRotating = false;
+            }
+
+            // Rotate the object while the keys are held down
+            if (isRotating)
+            {
+                if (Input.GetKey(KeyCode.W))
+                {
+                    RotateObject(Vector3.left);
+                }
+                else if (Input.GetKey(KeyCode.S))
+                {
+                    RotateObject(Vector3.right);
+                }
+                else if (Input.GetKey(KeyCode.A))
+                {
+                    RotateObject(Vector3.forward);
+                }
+                else if (Input.GetKey(KeyCode.D))
+                {
+                    RotateObject(Vector3.back);
+                }
+            }
+            else
+            {
+                // Gradually return to the initial rotation
+                if (Quaternion.Angle(transform.rotation, initialRotation) > 0.01f)
+                {
+                    transform.rotation = Quaternion.Lerp(transform.rotation, initialRotation, Time.deltaTime * returnSpeed);
+                }
+            }
         }
             
         
@@ -66,4 +116,14 @@ public class PlayerController0 : MonoBehaviour
             playerAudio.PlayOneShot(powerupSound, 1.0f);
         }
     }
+
+    private void RotateObject(Vector3 axis)
+    {
+        // Calculate the target rotation based on the specified axis
+        Quaternion targetRotation = Quaternion.Euler(transform.eulerAngles + axis * rotationAmount);
+
+        // Rotate towards the target rotation
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+    }
 }
+

@@ -45,17 +45,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacles:
-  - {fileID: 5014477956312756799, guid: 810c38e1a1bbe415fb3fbfc84107e764, type: 3}
-  - {fileID: 7650956496486028496, guid: c10c2a87c75944ad6b0ff7d79fdf71b3, type: 3}
-  - {fileID: 7202209297983416650, guid: 9411a7e0e41085f438dba15fbc71d81a, type: 3}
-  - {fileID: 1167030526632078727, guid: efe3994bab5ef624094c8deab6295bda, type: 3}
-  - {fileID: 116432821597490380, guid: 1c83b91d20732e04cb8fdb5f3ff55836, type: 3}
-  - {fileID: 6228065949576239657, guid: 6d1ad6efd0c43864d98beeea1472271a, type: 3}
-  - {fileID: 3126067583531464016, guid: b163a68e64bd740b283f1f9f27f693f6, type: 3}
-  - {fileID: 2944016001731802783, guid: 1fc82ce4dba2e4622ac9ce36ef5532e4, type: 3}
-  - {fileID: 6837790341721312338, guid: 8c3914356198e48d184035a71302b570, type: 3}
-  - {fileID: 7536541165404470005, guid: 1a02bf9f821d54cd1a8c1ef5cfe45237, type: 3}
-  - {fileID: 951101209159839437, guid: ed0295d9ab9ae44adbeccd4d46daa809, type: 3}
+  - {fileID: 5616382943699297733, guid: c741ec960de7347c2bd32c813b4c35cd, type: 3}
+  - {fileID: 7232784862323757084, guid: 4f515f0246a5146beb6e9c9bbc6f4596, type: 3}
+  - {fileID: 5712882114054381347, guid: afc65e6160b084018a27794519814d63, type: 3}
+  - {fileID: 4704211012286256829, guid: 283dfe5d7eb47408680566703fa93b41, type: 3}
+  - {fileID: 6611490350208969079, guid: 0ece17f685f4e402eb552d5f4d680131, type: 3}
+  - {fileID: 7044536982909703066, guid: 2e0313fbb9a9345fb9d715894f12d917, type: 3}
+  - {fileID: 1162254307972855528, guid: 59863ef60fd184565b168ea4e8484394, type: 3}
+  - {fileID: 6860163541442232795, guid: 7a8c5bccc4ec5453086e34ddb93622bd, type: 3}
+  - {fileID: 3030815530813168472, guid: 63f80a9269ca4405185bebfc707b639e, type: 3}
+  - {fileID: 1439124564652780470, guid: 74e8231edb07c43ec95dadcd0f5be202, type: 3}
+  - {fileID: 5403773441093188742, guid: 73adadb3af1554bdf91e0b375a28e491, type: 3}
   powerUps:
   - {fileID: 6667326972120564754, guid: 6dff5ca7b2f9b466aa520c6bd1806593, type: 3}
   - {fileID: 6667326972120564754, guid: 00f7b7f18cbf3487eaa098ee983877bd, type: 3}
@@ -66,7 +66,6 @@ MonoBehaviour:
   - {fileID: 6667326972120564766, guid: 00f7b7f18cbf3487eaa098ee983877bd, type: 3}
   - {fileID: 6667326972120564766, guid: 0d1ba013cd450440c88b0d4c53d14291, type: 3}
   - {fileID: 6667326972120564766, guid: 62237c2d21c2e4728aa74d7a01f4ce70, type: 3}
-  gameDifficulty: {fileID: 0}
   startDelay: 1
   ObSpawnChange: 0
   isSpawningWalls: 0
