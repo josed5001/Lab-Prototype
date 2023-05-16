@@ -31,6 +31,7 @@ public class MoveUp : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        
     }
     
 }
