@@ -6,7 +6,7 @@ public class PlayerController0 : MonoBehaviour
 {
     public GameManager GameManager;
     public GameObject projectilePrefab;
-    private float speed = 10.0f;
+    public float speed = 10.0f;
     private Rigidbody playerRb;
 
 

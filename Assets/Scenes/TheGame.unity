@@ -1593,7 +1593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacleSpawnTime: 3
-  Value: 2
+  Value: 0.2
 --- !u!4 &1434367903
 Transform:
   m_ObjectHideFlags: 0
