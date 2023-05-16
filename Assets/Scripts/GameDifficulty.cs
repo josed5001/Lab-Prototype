@@ -6,26 +6,25 @@ public class GameDifficulty : MonoBehaviour
 {
     
     public float obstacleSpawnTime = 3f;
-    public float Value = 2f;
+    public float Value = 0.2f;
+    private float timeDelay = 14.5f;
 
-    private float timer = 0f;
     // Start is called before the first frame update
     void Start()
     {
-        timer = Time.time;
+        InvokeRepeating("obSubtract", timeDelay, timeDelay);
     }
 
     // Update is called once per frame
     void Update()
     {
        
-        if(timer > 10f)
-        {
-            obstacleSpawnTime /= Value;
-
-            
-        }
+       
     }
+    void obSubtract()
+    {
     
+        obstacleSpawnTime -= Value;
+    }
    
 }
