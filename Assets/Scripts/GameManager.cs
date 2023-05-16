@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject[] prefabDiff;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
+    public GameObject titleScreen;
+    public Button restart;
     private float timeDelay = 15f;
     private float deleteDelay = 14.5f;
     private float score;
@@ -17,14 +21,18 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+   
+    }
 
+    public void StartGame()
+    {
         StartCoroutine(prefabSpawn());
         InvokeRepeating("destroyFun", deleteDelay, deleteDelay);
         isGameActive = true;
+        titleScreen.gameObject.SetActive(false);
+        scoreText.gameObject.SetActive(true);
         score = 0;
         pointIncreasedPerSecond = 10f;
-         
-            
     }
 
     // Update is called once per frame
@@ -57,9 +65,16 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        
         gameOverText.gameObject.SetActive(true);
+        restart.gameObject.SetActive(true);
         isGameActive = false;
         
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     // Spawn Level Prefabs
