@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController0 : MonoBehaviour
 {
     public GameManager GameManager;
+    public GameObject projectilePrefab;
     private float speed = 10.0f;
     private Rigidbody playerRb;
 
@@ -18,13 +19,14 @@ public class PlayerController0 : MonoBehaviour
     public float rotationSpeed = 5f;    // Speed of rotation
     public float returnSpeed = 2f;      // Speed of returning to the initial rotation
     private Quaternion initialRotation;
-    private Quaternion targetRotation;
     private bool isRotating = false;
 
-    public bool Powerup1 = false;
-    public bool Powerup2 = false;
-    public bool Powerup3 = false;
-    public bool Powerup4 = false;
+    private float timeDelay = 10f;
+    private bool pW1 = false;
+    private bool pW2 = false;
+    private bool pW3 = false;
+    public bool pW4 = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +84,16 @@ public class PlayerController0 : MonoBehaviour
                     transform.rotation = Quaternion.Lerp(transform.rotation, initialRotation, Time.deltaTime * returnSpeed);
                 }
             }
+
+
+
+            if (pW4 == true)
+            {
+                if(Input.GetKeyDown(KeyCode.Space))
+                {
+                    Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+                }
+            }
         }
             
         
@@ -102,7 +114,8 @@ public class PlayerController0 : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.CompareTag("Obstacle"))
+
+        if (collision.gameObject.CompareTag("Obstacle") && pW1 == false)
         {
             playerAudio.PlayOneShot(crashSound, 1.0f);
             playerAudio.PlayOneShot(GameOverSound, 1.0f);
@@ -119,26 +132,27 @@ public class PlayerController0 : MonoBehaviour
         {
             Destroy(other.gameObject);
             playerAudio.PlayOneShot(powerupSound, 1.0f);
-            Powerup1 = true;
+            powerUpTags("Powerup");
         }
-        if(other.gameObject.CompareTag("PowerUp2"))
+        if (other.gameObject.CompareTag("PowerUp2"))
         {
             Destroy(other.gameObject);
             playerAudio.PlayOneShot(powerupSound, 1.0f);
-            Powerup2 = true;
+            powerUpTags("PowerUp2");
         }
-        if(other.gameObject.CompareTag("PowerUp3"))
+        if (other.gameObject.CompareTag("PowerUp3"))
         {
             Destroy(other.gameObject);
             playerAudio.PlayOneShot(powerupSound, 1.0f);
-            Powerup3 = true;
+            powerUpTags("PowerUp3");
         }
-        if(other.gameObject.CompareTag("PowerUp4"))
+        if (other.gameObject.CompareTag("PowerUp4"))
         {
             Destroy(other.gameObject);
             playerAudio.PlayOneShot(powerupSound, 1.0f);
-            Powerup4 = true;
+            powerUpTags("PowerUp4");
         }
+
     }
 
     private void RotateObject(Vector3 axis)
@@ -149,5 +163,54 @@ public class PlayerController0 : MonoBehaviour
         // Rotate towards the target rotation
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
+    void powerUpTags(string tag)
+    {
+        GameObject[] taggedObjects = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject taggedObject in taggedObjects)
+        {
+            if (taggedObject.CompareTag("Powerup"))
+            {
+                pW1 = true;
+                StartCoroutine(powerUpCountdown1());
+            }
+            else if (taggedObject.CompareTag("PowerUp2"))
+            {
+                GameObject[] obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
+                foreach (GameObject obstacle in obstacles)
+                {
+                    Destroy(obstacle);
+                }
+            }
+            else if (taggedObject.CompareTag("PowerUp3"))
+            {
+                pW3 = true;
+                StartCoroutine(powerUpCountdown2());
+            }
+            else if (taggedObject.CompareTag("PowerUp4"))
+            {
+                pW4 = true;
+                StartCoroutine(powerUpCountdown3());
+            }
+        }
+       
+    }
+    
+    IEnumerator powerUpCountdown1()
+    {
+        yield return new WaitForSeconds(timeDelay);
+        pW1 = false;
+    }
+    IEnumerator powerUpCountdown2()
+    {
+        yield return new WaitForSeconds(timeDelay);
+        pW3 = false;
+    }
+    IEnumerator powerUpCountdown3()
+    {
+        yield return new WaitForSeconds(timeDelay);
+        pW4 = false;
+    }
+
+
 }
 
