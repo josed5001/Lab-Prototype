@@ -40,6 +40,7 @@ public class PlayerController0 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (GameManager.isGameActive == true)
         {
             MovePlayer();
