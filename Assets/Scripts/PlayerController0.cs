@@ -10,7 +10,7 @@ public class PlayerController0 : MonoBehaviour
     private Rigidbody playerRb;
 
 
-    public AudioSource playerAudio;
+    private AudioSource playerAudio;
     public AudioClip GameOverSound;
     public AudioClip crashSound;
     public AudioClip powerupSound;
