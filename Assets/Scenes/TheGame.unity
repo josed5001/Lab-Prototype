@@ -353,7 +353,7 @@ RectTransform:
   m_GameObject: {fileID: 270535474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 71}
-  m_LocalScale: {x: 2.768, y: 2.768, z: 2.768}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1142914010}
@@ -1644,7 +1644,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 857b80913777548b693a65aa657e693f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.55
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2384,17 +2384,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4861346252564229504, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
-      propertyPath: crashSound
-      value: 
-      objectReference: {fileID: 8300000, guid: e90bf6751ec0341bcb4113b1473628cd, type: 3}
-    - target: {fileID: 4861346252564229504, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
       propertyPath: GameManager
       value: 
       objectReference: {fileID: 1551978419}
-    - target: {fileID: 4861346252564229504, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
-      propertyPath: GameOverSound
-      value: 
-      objectReference: {fileID: 8300000, guid: e04b40589bc4444dca55c26ad5028fd6, type: 3}
     - target: {fileID: 4861346252564229504, guid: ab143e8f50e859a4a95b7dd14f7be51a, type: 3}
       propertyPath: projectilePrefab
       value: 
