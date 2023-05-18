@@ -77,14 +77,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacles:
-  - {fileID: 4330484261120835847, guid: 6f4af60fde5624775a4f32c4fde5d682, type: 3}
-  - {fileID: 6548107950078812766, guid: 2c59f50cfe87b9a43a95426119f5a099, type: 3}
-  - {fileID: 6433641803629217831, guid: bfec5eb2e50f32842b8f3cd3af6635d4, type: 3}
-  - {fileID: 6280838091529422474, guid: 8bd169d82b77cc94aa9edc34cca84fb2, type: 3}
-  - {fileID: 8530818083988220726, guid: 0f0b2766530b14981a38a993780e12f5, type: 3}
-  - {fileID: 6609432336828859081, guid: b6c8c3f687d4147fb85c8dca2a460de6, type: 3}
-  - {fileID: 4945218398641760511, guid: 477b998f6b23e4e81aea2f663d1c531e, type: 3}
-  - {fileID: 7180145942958307314, guid: 8a301bba914224c54a4891895e6b38d4, type: 3}
+  - {fileID: 2626498759402010357, guid: 06de6355fb4f24cd38cfbb861b12a0f2, type: 3}
+  - {fileID: 2282839012368698992, guid: cf7b4974c80c846ca8aec1c0336c941c, type: 3}
+  - {fileID: 4220536513332218052, guid: ec47873811264460e9a49a02730f2354, type: 3}
+  - {fileID: 861073675260312208, guid: 92e98b49e137e42a5a750bddc4df633c, type: 3}
+  - {fileID: 7378334329168633868, guid: ad521a6bb1a0447728f30abcb266a162, type: 3}
+  - {fileID: 2964040771936902014, guid: e904af10a88bc4cf6967a9d92052164b, type: 3}
+  - {fileID: 7597645359701155140, guid: 7d2b0680a783f48abaf12cbe8214ab45, type: 3}
+  - {fileID: 4711234472741143738, guid: 1f14e07b98bbc4a3090401afa4f8cb32, type: 3}
   powerUps:
   - {fileID: 6667326972120564754, guid: 6dff5ca7b2f9b466aa520c6bd1806593, type: 3}
   - {fileID: 6667326972120564754, guid: 00f7b7f18cbf3487eaa098ee983877bd, type: 3}
