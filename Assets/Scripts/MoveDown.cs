@@ -8,7 +8,6 @@ public class MoveDown : MonoBehaviour
     
     private float zDestroy = -110.0f;
     
-    private float timeDelay = 14.5f;
     private GameDifficulty gameDifficulty;
     private SpawnManager spawnScript;
     private Rigidbody objectRb;
