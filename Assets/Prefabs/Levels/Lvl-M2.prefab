@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6313470209848916450
+--- !u!1 &8497058248697350588
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,31 +8,31 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6086479950123272663}
+  - component: {fileID: 3233478899142189111}
   m_Layer: 0
-  m_Name: MedDiff
+  m_Name: Lvl-M2
   m_TagString: Level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6086479950123272663
+--- !u!4 &3233478899142189111
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6313470209848916450}
+  m_GameObject: {fileID: 8497058248697350588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6357353193925381613}
+  - {fileID: 6672867968833232748}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &7429481175850952172
+--- !u!1 &9024756209376959623
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40,8 +40,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6357353193925381613}
-  - component: {fileID: 2466682505521596485}
+  - component: {fileID: 6672867968833232748}
+  - component: {fileID: 4336173705638941220}
   m_Layer: 0
   m_Name: Spawn Manager
   m_TagString: Untagged
@@ -49,31 +49,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6357353193925381613
+--- !u!4 &6672867968833232748
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7429481175850952172}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 9024756209376959623}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 6086479950123272663}
+  m_Father: {fileID: 3233478899142189111}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2466682505521596485
+--- !u!114 &4336173705638941220
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7429481175850952172}
+  m_GameObject: {fileID: 9024756209376959623}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b495f56452c240cebdca99a12812cb5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ea0c3d4882014d6e88ac5d25f2f23e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obstacles:
@@ -85,15 +85,21 @@ MonoBehaviour:
   - {fileID: 2964040771936902014, guid: e904af10a88bc4cf6967a9d92052164b, type: 3}
   - {fileID: 7597645359701155140, guid: 7d2b0680a783f48abaf12cbe8214ab45, type: 3}
   - {fileID: 4711234472741143738, guid: 1f14e07b98bbc4a3090401afa4f8cb32, type: 3}
+  - {fileID: 5616382943699297733, guid: c741ec960de7347c2bd32c813b4c35cd, type: 3}
+  - {fileID: 7232784862323757084, guid: 4f515f0246a5146beb6e9c9bbc6f4596, type: 3}
+  - {fileID: 1162254307972855528, guid: 59863ef60fd184565b168ea4e8484394, type: 3}
+  - {fileID: 6860163541442232795, guid: 7a8c5bccc4ec5453086e34ddb93622bd, type: 3}
+  - {fileID: 3030815530813168472, guid: 63f80a9269ca4405185bebfc707b639e, type: 3}
+  - {fileID: 1439124564652780470, guid: 74e8231edb07c43ec95dadcd0f5be202, type: 3}
+  - {fileID: 5403773441093188742, guid: 73adadb3af1554bdf91e0b375a28e491, type: 3}
   powerUps:
-  - {fileID: 6667326972120564754, guid: 6dff5ca7b2f9b466aa520c6bd1806593, type: 3}
   - {fileID: 6667326972120564754, guid: 00f7b7f18cbf3487eaa098ee983877bd, type: 3}
   - {fileID: 6667326972120564754, guid: 0d1ba013cd450440c88b0d4c53d14291, type: 3}
+  - {fileID: 6667326972120564754, guid: 6dff5ca7b2f9b466aa520c6bd1806593, type: 3}
   powerUpPos:
-  - {fileID: 6667326972120564766, guid: 6dff5ca7b2f9b466aa520c6bd1806593, type: 3}
   - {fileID: 6667326972120564766, guid: 00f7b7f18cbf3487eaa098ee983877bd, type: 3}
   - {fileID: 6667326972120564766, guid: 0d1ba013cd450440c88b0d4c53d14291, type: 3}
-  - {fileID: 6667326972120564766, guid: 62237c2d21c2e4728aa74d7a01f4ce70, type: 3}
+  - {fileID: 6667326972120564766, guid: 6dff5ca7b2f9b466aa520c6bd1806593, type: 3}
   startDelay: 1
   ObSpawnChange: 0
   isSpawningWalls: 0

@@ -12,8 +12,8 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI gameOverText;
     public GameObject titleScreen;
     public Button restart;
-    private float timeDelay = 15f;
-    private float deleteDelay = 14.5f;
+    private float timeDelay = 30f;
+    private float deleteDelay = 29.5f;
     private float score;
 
     public bool isGameActive = false;
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
             score += pointIncreasedPerSecond * Time.deltaTime;
             int roundedScore = Mathf.RoundToInt(score);
             scoreText.text = "Score: " + roundedScore.ToString();
+            
         }
         
     }
@@ -86,11 +87,12 @@ public class GameManager : MonoBehaviour
         {
             Instantiate(prefabDiff[currentIndex], transform.position, prefabDiff[currentIndex].gameObject.transform.rotation);
             currentIndex++;
-
             if (currentIndex >= prefabDiff.Length) // check if currentIndex has reached the end of the array
             {
-               currentIndex = 0;  //reset currentIndex to 0 to start over from the beginning of the array
+                currentIndex -= 1;
             }
+
+
             yield return new WaitForSeconds(timeDelay);
         }
     }
