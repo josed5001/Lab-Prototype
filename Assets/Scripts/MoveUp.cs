@@ -27,11 +27,11 @@ public class MoveUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!other.gameObject.CompareTag("Player"))
+        if(other.gameObject.layer == LayerMask.NameToLayer("Player and Wall"))
         {
-            Destroy(other.gameObject);
+            return;
         }
-        
+        Destroy(other.gameObject);
     }
     
 }
